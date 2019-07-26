@@ -162,7 +162,7 @@ Image was displayed.
 ![alt text](https://github.com/mahimatendulkar/Crop-Yield-Prediction-and-Estimation-using-Time-series-remote-sensing-data./blob/master/img14.png)
 Image details: Red region is the urban/non vegetation area, blue region is waterbody, yellow are fields and dark green region is Natural vegetation 
 
-Test 5
+# Test 5
 
 Objective: Use of Clustering to Mask multiple region depending on their respective bands value.
 
@@ -184,8 +184,8 @@ We applied k mean unsupervised algorithm to the selected region. It has been see
 
 
 
-Submitted by:
- Mahima Tendulkar
-         (B.tech ECE final year student at NIT Goa) 
-Aakash Kumar
+# Submitted by:
+# Mahima Tendulkar
+(B.tech ECE final year student at NIT Goa) 
+# Aakash Kumar
 (B.tech CSE final year student at NIT Goa)
