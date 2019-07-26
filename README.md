@@ -17,10 +17,10 @@ The required import and export of a product can also be determined.
 This will also help in monitoring the growth of healthy crops. 
 Suggestive methods will help the farmer to increase the yield
 
-
-
-
 # Layout:Part1: (for prediction of yield)
+![alt text](https://github.com/mahimatendulkar/Crop-Yield-Prediction-and-Estimation-using-Time-series-remote-sensing-data./blob/master/layout1.png)
+
+
 
 
 
