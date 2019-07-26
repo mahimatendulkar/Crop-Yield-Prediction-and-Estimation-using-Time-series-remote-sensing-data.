@@ -20,82 +20,56 @@ Suggestive methods will help the farmer to increase the yield
 # Layout:Part1: (for prediction of yield)
 ![alt text](https://github.com/mahimatendulkar/Crop-Yield-Prediction-and-Estimation-using-Time-series-remote-sensing-data./blob/master/layout1.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Layout: (Part2) (for suggesting methods for increasing yield)​
-
-
+![alt text](https://github.com/mahimatendulkar/Crop-Yield-Prediction-and-Estimation-using-Time-series-remote-sensing-data./blob/master/layout2.png)
 
 # Datasets available:
 
 Below link will generate the following data fields(related to Goa state): 
-Name of Crop, Year, Season, Area(hectares), Production(Tonnes), Yield(Tonnes/Hectare)
+1.Name of Crop, Year, Season, Area(hectares), Production(Tonnes), Yield(Tonnes/Hectare)
            https://aps.dac.gov.in/APY/Public_Report1.aspx
 
-Google Earth Engine: Provides the datasets for the weather, Landsat and sentinel.
+2.Google Earth Engine: Provides the datasets for the weather, Landsat and sentinel.
            https://developers.google.com/earth-engine/dat
            https://earthexplorer.usgs.gov/
 
-IMD for weather and climate
+3.IMD for weather and climate
            http://www.imd.gov.in/Welcome%20To%20IMD/Welcome.php
-
-
 
 
 # Related studies:
 
 Temperature extremes: Effect on plant growth and development 
-By Jerry L. Hatfield and John H Prueger.​
-(Journal of Sciencedirect)​
+By Jerry L. Hatfield and John H Prueger.
+(Journal of Sciencedirect)
 
-1. Warmer temperature with climate change causes an exponential decrease of the final yield.​
+1. Warmer temperature with climate change causes an exponential decrease of the final yield.
 
-2. If we divide the whole plantation stages into two - reproductive phase (pollination) and growth phase, it’s found that the reproductive stage is one of the most sensitive stages. Temperature extreme at this stage will strongly affect the yield. ​
+2. If we divide the whole plantation stages into two - reproductive phase (pollination) and growth phase, it’s found that the reproductive stage is one of the most sensitive stages. Temperature extreme at this stage will strongly affect the yield. 
 
 4. There is about 80 - 90 percent reduction in productivity on an increase of temperature for maize plants.​
-​
+
 5.  Effect of temperature on the plants increases on deficit or excess of water given to the crops.​
 Thus, we found that deciding the date for planting crops such that the reproductive phase of plant will suffer less weather(temperature/precipitation) changes will increase the final output (aka yield) of the crops.​
-
- 
-
-
-
+![alt text](https://github.com/mahimatendulkar/Crop-Yield-Prediction-and-Estimation-using-Time-series-remote-sensing-data./blob/master/img1.jpg)
 
 # Data Extraction for Preprocessing and Data Analysis ​
-
- 
+![alt text](https://github.com/mahimatendulkar/Crop-Yield-Prediction-and-Estimation-using-Time-series-remote-sensing-data./blob/master/img2.jpg)
 (Fig1)
+
 We can create Color gradient map giving a score to each color.​
 Barren Land will be generally shown by brown color and fully grown land as dark green color.​
 After selecting the region divide it into n*n grid and assign a score to it according to color gradient scale( Fig 1). 
-The collected scores can then be arranged and stored in time series graph for a specific crop for multiple harvest ( 1 harvest  ~ 4 months )​
+The collected scores can then be arranged and stored in time series graph for a specific crop for multiple harvest ( 1 harvest  ~ 4 months )
+
 This is further divided into multiple stages according to the plant stages ( Pollination , Sowing, growth, harvesting stages , reproduction stage). (Fig 2)
 
-  
+![alt text](https://github.com/mahimatendulkar/Crop-Yield-Prediction-and-Estimation-using-Time-series-remote-sensing-data./blob/master/img3.jpg)  
 (Fig 2)
-
+![alt text](https://github.com/mahimatendulkar/Crop-Yield-Prediction-and-Estimation-using-Time-series-remote-sensing-data./blob/master/img4.jpg)
 (Fig 3)
 
-We can then plot graph for each of the different types of Satellite images ( Temperature, crop-growth, C02, Precipitation, humidity, etc. )​
+We can then plot graph for each of the different types of Satellite images ( Temperature, crop-growth, C02, Precipitation, humidity, etc. )
 As for each species, there is also a graph for temperature ( min, optimum, max) in terms of growth at each stage ( Spl. For reproduction and growth stage) (Fig 3)
 The above temperature graph is also useful for yield prediction.
 After getting graph, we can find the relationship between each component and find out about how they change with time.
@@ -107,28 +81,14 @@ Plant disease for now is not taken into consideration ​
 
 
 
-Technology Stack used: Earth engine code editor (java script), Landsat 7 and Landsat 8 Imagery.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Technology Stack used: Earth engine code editor (java script), Landsat 7 and Landsat 8 Imagery.
 
 # Discussion:
 
 # Test 1
 
 Objective: we want to classify each pixel of the map based on three classes. These classes are selected based on the spectral output of each band (water, vegetation, and bare/constructed area). 
-
+![alt text](https://github.com/mahimatendulkar/Crop-Yield-Prediction-and-Estimation-using-Time-series-remote-sensing-data./blob/master/img5.png)
 
 Image details:Above is the Landsat image. Points are marked manually
 Purple point- Region of Interest
