@@ -1,0 +1,6 @@
+var input = ee.Image("LANDSAT/LE7_TOA_1YEAR/2001"),
+    region = /* color: #d63000 */ee.Geometry.Polygon(
+        [[[29.7, 31.7],
+          [29.7, 30],
+          [32.5, 30],
+          [32.5, 31.7]]]);

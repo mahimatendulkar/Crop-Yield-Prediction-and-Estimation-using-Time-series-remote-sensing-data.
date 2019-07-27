@@ -1,0 +1,44 @@
+
+
+// Load Landsat 8 TOA images, get the least cloudy 2015 image.
+var image = ee.Image(ee.ImageCollection('LANDSAT/LC8_L1T_TOA')
+    // Geographically filter.
+    .filterBounds(roi3)
+    // Filter to get only 2015.
+    .filterDate('2015-01-01', '2015-12-31')
+    // Sort by cloud cover metadata (ascending).
+    .sort('CLOUD_COVER')
+    // Get the least cloudy image.
+    .first());
+
+// Display the input imagery.
+Map.centerObject(roi3, 11);
+Map.addLayer(image, {bands: ['B4', 'B3', 'B2'], max: 0.3}, 'Landsat image');
+
+// Merge the hand-drawn features into a single FeatureCollection.
+var newfc = bare.merge(vegetation).merge(water).merge(houses); 
+
+// Use these bands in the prediction.
+var bands = ['B2', 'B3', 'B4', 'B5', 'B6', 'B7'];
+
+// Make training data by 'overlaying' the points on the image.
+var training = image.select(bands).sampleRegions({
+  collection: newfc, 
+  properties: ['landcover'], 
+  scale: 10
+});
+
+// Get a CART classifier and train it.
+var classifier = ee.Classifier.cart().train({
+  features: training, 
+  classProperty: 'landcover', 
+  inputProperties: bands
+});
+
+// Classify the image.
+var classified = image.select(bands).classify(classifier);
+
+// Display the classification results.
+Map.addLayer(classified, {min: 0, max: 2, palette: ['red', 'green', 'blue', 'yellow']}, 'classification');
+
+
