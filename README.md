@@ -1,4 +1,13 @@
 # Crop Yield Prediction and Estimation using Time series remote sensing data.
+# Submitted by:
+Mahima Tendulkar
+
+(B.tech ECE final year student at NIT Goa)
+
+Aakash Kumar
+
+(B.tech CSE final year student at NIT Goa)
+
 
 # Objective:
 We aim to build an ML model that will predict the yield of a crop using time series analysis of remote sensing data.
@@ -228,9 +237,4 @@ We applied k mean unsupervised algorithm to the selected region. It has been see
 
 
 
-# Submitted by:
-# Mahima Tendulkar
-(B.tech ECE final year student at NIT Goa)
 
-# Aakash Kumar
-(B.tech CSE final year student at NIT Goa)
