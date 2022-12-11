@@ -45,7 +45,7 @@ Below link will generate the following data fields(related to Goa state):
            https://aps.dac.gov.in/APY/Public_Report1.aspx
 
 2.Google Earth Engine: Provides the datasets for the weather, Landsat and sentinel.
-           https://developers.google.com/earth-engine/dat
+           https://developers.google.com/earth-engine/
            https://earthexplorer.usgs.gov/
 
 3.IMD for weather and climate
